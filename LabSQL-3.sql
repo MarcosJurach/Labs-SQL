@@ -21,3 +21,4 @@ select *, date_format(rental_date, '%b') as month, date_format(rental_date, '%a'
 -- Add an additional column day_type with values 'weekend' and 'workday' depending on the rental day of the week.
 
 -- How many rentals were in the last month of activity?
+select count(extract(month from rental_date)) from rental;
